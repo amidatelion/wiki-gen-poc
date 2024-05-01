@@ -1,0 +1,29 @@
+==Faction Store Inventory==
+The Federated Suns faction store can be accessed in any of their systems after allying with them. [[Faction Stores|A list of all faction stores can be found here.]]
+
+'''Legend:'''
+*{{Highlight|Faction Unique|LightBlue}}
+
+{| class="wikitable " style="text-align: center"
+! Faction
+! Weapons
+! Ammunition
+! Equipment
+! Full 'Mechs
+! 'Mech Parts
+! Vehicles
+! Battle Armor
+! Contracts
+|-
+! [[File:Davion_logo.png|link=Federated Suns|75px]] 
+[[Federated Suns|Federated Suns (Davion)]]
+| [[Weapons#BA Light Recoilless Rifle|BA Light Recoilless Rifle]]</br>[[Weapons#Single Shot|BA Magshot Gauss Rifle]]</br>[[Weapons#BA Light Recoilless Rifle|BA Light Recoilless Rifle]]</br>[[Weapons#Single Shot|BA Magshot Gauss Rifle]]</br>[[Weapons#BA SMG|BA SMG]]</br>[[Weapons#Bomb Bays|Cluster Bomb]]</br>[[Weapons#Bomb Bays|HiEx Bomb]]</br>[[Weapons#Bomb Bays|Inferno Bomb]]</br>[[Weapons#Mech Taser|Mech Taser]]</br>[[Weapons#Rotary Autocannons|Rotary AC/2]]</br>[[Weapons#Rotary Autocannons|Rotary AC/5]]</br>[[Weapons#Ultra Autocannons|UAC/2]]</br>[[Weapons#Ultra Autocannons|UAC/5]]</br>[[Weapons#Ultra Autocannons|UAC/10]]</br>[[Weapons#Ultra Autocannons|UAC/20]]</br>
+| [[Ammunition#|Ammo LRM ARTIV]]</br>[[Ammunition#|Ammo RAC/2]]</br>[[Ammunition#|Ammo RAC/2 [Half]]]</br>[[Ammunition#|Ammo RAC/5]]</br>[[Ammunition#|Ammo RAC/5 [Half]]]</br>[[Ammunition#|Ammo SRM ARTIV]]</br>[[Ammunition#|Ammo Taser]]</br>[[Ammunition#|Ammo UAC/2]]</br>[[Ammunition#|Ammo UAC/5]]</br>[[Ammunition#|Ammo UAC/10]]</br>[[Ammunition#|Ammo UAC/20]]</br>
+| [[Weapon_Attachments#Artemis IV FCS|Artemis IV FCS]]</br>[[Weapon_Attachments#Autocannon FCS|Autocannon FCS]]</br>[[Foot_Actuators#Foot Roundhouse + +|Foot Roundhouse + +]]</br>[[Cooling#Heat Sink Freezer (D)|Heat Sink Freezer (D)]]</br>[[Lower_Leg_Actuators#Lower Leg Muay Thai + +|Lower Leg Muay Thai + +]]</br>[[Shoulder_Actuators#Shoulder Tackle + +|Shoulder Tackle + +]]</br>{{Highlight|[[Armor#Ultra Ferro-Fibrous Armor|Ultra Ferro]]|LightBlue}}</br>[[Upper_Arm_Actuators#Upper Arm Impede + +|Upper Arm Impede + +]]</br>
+| [[Argus#AGS-4D|Argus AGS-4D]]</br>[[Battleaxe#BKX-8K|Battleaxe BKX-8K]]</br>[[Bushwacker#BSW-X1|Bushwacker BSW-X1]]</br>[[Chimera#CMA-1S|Chimera CMA-1S]]</br>[[Dervish#DV-7D|Dervish DV-7D]]</br>[[Enfield#END-6Q|Enfield END-6Q]]</br>[[Enforcer II#ENF-5D|Enforcer II ENF-5D]]</br>[[Fireball#ALM-8D|Fireball ALM-8D]]</br>[[JagerMech II#JM7-F|JagerMech II JM7-F]]</br>[[Osiris#OSR-3D|Osiris OSR-3D]]</br>[[Penetrator#PTR-4D|Penetrator PTR-4D]]</br>[[Salamander#PPR-5S|Salamander PPR-5S]]</br>[[Griffin_(60T)#GRF-2N-X|Super Griffin GRF-2N-X]]</br>[[Super Wasp#WSP-2A-X|Super Wasp WSP-2A-X]]</br>[[Swordsman#SWD-3|Swordsman SWD-3]]</br>[[Talon#TLN-5W|Talon TLN-5W]]</br>[[Templar#TLR1-O|Templar TLR1-O]]</br>[[Titan#TI-1A|Titan TI-1A]]</br>[[Valkyrie II#VLK-II-2A|Valkyrie II VLK-II-2A]]</br>[[Valkyrie#VLK-QD|Valkyrie VLK-QD]]</br>[[Wasp LAM#WSP-103|Wasp LAM WSP-103]]</br>
+| [[JagerMech II#JM7-D|JagerMech II JM7-D]]</br>[[Valkyrie II#VLK-II-2A|Valkyrie II VLK-II-2A]]</br>
+| [[Paladin#Paladin Prototype Defense System|Paladin Prototype Defense System]]</br>
+| [[Grenadier Battle Armor#|Grenadier Battle Armor]]</br>[[Infiltrator Mk II Battle Armor#|Infiltrator Mk II Battle Armor]]</br>
+| 
+|-
+|}
