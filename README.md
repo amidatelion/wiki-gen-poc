@@ -4,6 +4,10 @@ This serves as a proof of concept of a page generator for BTA wiki. Ideally this
 
 # How it works
 
+# Iteration 3 
+python3 factionParser.py ~/fungit/BattleTech-Advanced/DynamicShops/fshops
+build this out
+
 # Iteration 2
 1. Template for a whole table (with escaped `{{}}`!) is in `templates/factionStore.tpl`
 2. That is rendered out with information hardcoded in `factionRenderer.py`
