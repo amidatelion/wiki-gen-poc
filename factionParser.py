@@ -17,42 +17,50 @@ def find_items_file(item_name, search_dirs):
                 print(f"Error reading file '{file_path}': {e}")
     return None
 
+def recurse_into_itemCollection(item_name, search_dirs):
+    recursed_matched_entries = {}
+    items_file_path = find_items_file(item_name, search_dirs)
+    if items_file_path:
+        #print(f"Found {item_name} in: {items_file_path}")
+        with open(items_file_path, "r") as items_file:
+            csv_reader = csv.reader(items_file)
+            entries = []
+            for i, row in enumerate(csv_reader):
+                if i > 0:  # Skip the first row
+                    entries.append(row[0])  # Add the first entry on each line to the list
+            recursed_matched_entries[item_name] = entries
+    else:
+        print(f"{item_name} file for '{item_name}' not found in specified directories.")
+    return recursed_matched_entries
+
+""" def parseFactionTree(item_name, search_dirs):
+    if item_name.startswith("itemCollection"):
+        items_file_path = find_items_file(item_name, search_dirs)
+    else """
+
 def process_Faction_Collection(file_path, search_dirs):
     matched_entries = {}
     try:
         with open(file_path, "r") as json_file:
             data = json.load(json_file)
             item_name = data[0].get("items")
-            if item_name:
-                if item_name.startswith("itemCollection"):
-                    print(item_name)
-                    # If item starts with "itemcollection", find its file and add its contents
-                    print(f"Found {item_name}, searching again")
-                    items_file_path = find_items_file(item_name, search_dirs)
-                    if items_file_path:
-                        print(f"Found {item_name} in: {items_file_path}")
-                        with open(items_file_path, "r") as items_file:
-                            csv_reader = csv.reader(items_file)
-                            entries = []
-                            for i, row in enumerate(csv_reader):
-                                if i > 0:  # Skip the first row
-                                    entries.append(row[0])  # Add the first entry on each line to the list
-                            matched_entries[item_name] = entries
-                    else:
-                        print(f"{item_name} file for '{item_name}' not found in specified directories.")
+            if item_name.startswith("itemCollection"):
+                matched_entries.update(recurse_into_itemCollection(item_name, search_dirs))
+                #print("#####Recursed Entry Debugging#####\n", matched_entries)
+            else:
+                items_file_path = find_items_file(item_name, search_dirs)
+                if items_file_path:
+                    print("#####normal Debugging#####\n")
+                    print(f"Found {item_name} in: {items_file_path}")
+                    with open(items_file_path, "r") as items_file:
+                        csv_reader = csv.reader(items_file)
+                        entries = []
+                        for i, row in enumerate(csv_reader):
+                            if i > 0:  # Skip the first row
+                                entries.append(row[0])  # Add the first entry on each line to the list
+                        matched_entries[item_name] = entries
                 else:
-                    items_file_path = find_items_file(item_name, search_dirs)
-                    if items_file_path:
-                        print(f"Found {item_name} in: {items_file_path}")
-                        with open(items_file_path, "r") as items_file:
-                            csv_reader = csv.reader(items_file)
-                            entries = []
-                            for i, row in enumerate(csv_reader):
-                                if i > 0:  # Skip the first row
-                                    entries.append(row[0])  # Add the first entry on each line to the list
-                            matched_entries[item_name] = entries
-                    else:
-                        print(f"{item_name} file for '{item_name}' not found in specified directories.")
+                    print(f"{item_name} file for '{item_name}' not found in specified directories.")
     except json.JSONDecodeError:
         print(f"Error decoding JSON in file: {file_path}")
     return matched_entries
@@ -70,7 +78,7 @@ def process_Faction_Entry(base_dir):
         file_path = os.path.join(base_dir, file_name)
         matched_entries = process_Faction_Collection(file_path, search_dirs)
         for item_name, entries in matched_entries.items():
-            print("#####Entry Debugging#####\n", item_name, entries)
+            #print("#####Entry Debugging#####\n", item_name, entries)
             if item_name not in all_matched_entries:
                 all_matched_entries[item_name] = []
             all_matched_entries[item_name].extend(entries)
