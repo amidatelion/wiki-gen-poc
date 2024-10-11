@@ -2,7 +2,7 @@ from jinja2 import Environment, FileSystemLoader
 
 
 weapons = [
-    {"item": "[[Weapons#Weapons#Cluster_Shot|Silver Bullet Gauss]]</br>"},
+    {"item": "[[Weapons#Cluster_Shot|Silver Bullet Gauss]]</br>"},
     {"item": "[[Weapons#Hyper_Laser|Hyper Laser]]</br>"},
     {"item": "[[Weapons#Weapons#X-Pulse_Lasers|Large X-Pulse Laser]]</br>"},
     {"item": "[[Weapons#Weapons#X-Pulse_Lasers|Medium X-Pulse Laser]]</br>"},

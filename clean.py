@@ -27,18 +27,20 @@ def process_files(primary_path, prefix):
 def add_file_contents(collection_name, csv_files_index, file_dict, current_file_lines, prefix):
         # Read file and get its contents
         csv_files_index[collection_name]
+        #print(csv_files_index)
         with open(csv_files_index[collection_name], 'r') as file:
             lines = file.readlines()
         # Skip the first line
         lines = lines[1:]
         # Iterate over the lines in the file
         for line in lines:
-            line = line.strip()
-            current_file_lines.append(line)
-            print("Current state: \r\n", current_file_lines)
+            line = line.split(",")
+            if line[0].startswith(prefix):
+                add_file_contents(line[0], csv_files_index, file_dict, current_file_lines, prefix)
+            else: 
+                current_file_lines.append(line[0])
+            #print("Current state: \r\n", current_file_lines)
             # If the line starts with the prefix, use the entire line as the file name
-#            if line.startswith(prefix):
-#                referenced_file = line  # Use the whole line as the file name
                 # Check if the referenced file exists in the secondary path
 #                if os.path.isfile(os.path.join(secondary_path, referenced_file)):
 #                    # Recursively add the contents of the referenced file
@@ -53,7 +55,7 @@ def index_csv_files(directory):
             # Check if the file ends with .csv
             if file.endswith('.csv'):
                 # Append the full file path to the list
-                csv_files[file.strip(".csv")]=os.path.join(root, file)
+                csv_files[file[:-4]]=os.path.join(root, file)
     
     return csv_files
 
