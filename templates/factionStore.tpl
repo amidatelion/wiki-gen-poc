@@ -17,7 +17,8 @@ The Terran Hegemony faction store can be accessed in any of their systems after 
 |-
 ! [[File:Cameron_logo.png|link=Terran Hegemony|75px]] 
 [[Terran Hegemony|Terran Hegemony (Cameron)]]
-| {% for weapon in weapons %}{{ weapon.item }}{% endfor %}
+| {% for weapon in weapons %}
+[[Weapons#Cluster_Shot|{{ weapon }}]]</br>{{ weapon }}{% endfor %}
 | {% for ammunition in ammunitions %}{{ ammunition.item }}{% endfor %}
 | {% for gear in gears %}{{ gear.item }}{% endfor %}
 | {% for mech in mechs %}{{ mech.item }}{% endfor %}

@@ -1,120 +1,70 @@
 import os
+import sys
 import json
-import csv
-import argparse
-
-# Function to find the items within the contents of CSV files in search directories
-def find_items_file(item_name):
-    for search_dir in search_dirs:
-        for file_name in os.listdir(search_dir):
-            file_path = os.path.join(search_dir, file_name)
-            try:
-                with open(file_path, "r") as search_file:
-                    file_contents = search_file.read()
-                    if item_name in file_contents:
-                        break
-
-                        """ with open(item_name, "r") as items_file:
-                            csv_reader = csv.reader(items_file)
-                            entries = []
-                            for i, row in enumerate(csv_reader):
-                                if i > 0:  # Skip the first row 
-                                    entries.append(row[0])  # Add the first entry on each line to the list"""
-                        return entries
-            except Exception as e:
-                print(f"Error reading file '{file_path}': {e}")
-    return [None]
-
-def recurse_into_itemCollection(item_name):
-    recursed_matched_entries = {}
-    items_file_path = find_items_file(item_name)
-    if items_file_path:
-        #print(f"Found {item_name} in: {items_file_path}")
-        with open(items_file_path, "r") as items_file:
-            csv_reader = csv.reader(items_file)
-            entries = []
-            for i, row in enumerate(csv_reader):
-                if i > 0:  # Skip the first row
-                    entries.append(row[0])  # Add the first entry on each line to the list
-            recursed_matched_entries[item_name] = entries
-    else:
-        print(f"{item_name} file for '{item_name}' not found in specified directories.")
-    return recursed_matched_entries
-
-def actually_recurse_into_itemCollection(item_name):
-    '''break down a list of lists into a single list'''
-    if not needs_to_recurse(item_name):
-        return item_name
-    
-    #next_item, rest = item_name[0], item_name[1:]
-    #if needs_to_recurse(next_item):
-    return [actually_recurse_into_itemCollection(next_item) for next_item in find_items_file(item_name)]
-
-
-def needs_to_recurse(item_name):
-    return item_name.startswith("itemCollection")
-
+from pprint import pp
 
 def process_Faction_Collection(file_path):
-    try:
-        with open(file_path, "r") as json_file:
-            data = json.load(json_file)
-            item_name = data[0].get("items")
-            #print("#####Item Debugging#####\n", item_name)
-            return actually_recurse_into_itemCollection(item_name)
-            """ if item_name.startswith("itemCollection"):
-                matched_entries.update(recurse_into_itemCollection(item_name))
-                #print("#####Recursed Entry Debugging#####\n", matched_entries)
-            else:
-                items_file_path = find_items_file(item_name)
-                if items_file_path:
-                    #print("#####normal Debugging#####\n")
-                    print(f"Found {item_name} in: {items_file_path}")
-                    with open(items_file_path, "r") as items_file:
-                        csv_reader = csv.reader(items_file)
-                        entries = []
-                        for i, row in enumerate(csv_reader):
-                            if i > 0:  # Skip the first row
-                                entries.append(row[0])  # Add the first entry on each line to the list
-                        matched_entries[item_name] = entries
-                else:
-                    print(f"{item_name} file for '{item_name}' not found in specified directories.") """
-    except json.JSONDecodeError:
-        print(f"Error decoding JSON in file: {file_path}")
-    return None
+    with open(file_path, "r") as json_file:
+        data = json.load(json_file)
+        item_name = data[0].get("items")
+        return item_name
 
-def process_Faction_Entry(base_dir):
-    # Define the two directories to search for the items files relative to base_dir
-    all_matched_entries = {}
-    # Loop over all files in the base directory
-    for file_name in os.listdir(base_dir):
-        file_path = os.path.join(base_dir, file_name)
-        matched_entries = process_Faction_Collection(file_path)
-        """ for item_name, entries in matched_entries.items():
-            #print("#####Entry Debugging#####\n", item_name, entries)
-            if item_name not in all_matched_entries:
-                all_matched_entries[item_name] = []
-            all_matched_entries[item_name].extend(entries) """
-    #print ("match?",matched_entries)
-    return matched_entries
+def process_files(primary_path, prefix):
+    file_dict = {}
+    csv_files_index = index_csv_files("DynamicShops/")
+    # Iterate through files in primary path and process each
+    for file_name in os.listdir(primary_path):
+        full_path = os.path.join(primary_path, file_name)
+        if os.path.isfile(full_path):
+            file_dict[file_name] = []
+            if file_name.endswith(".json"):
+                collection_name = process_Faction_Collection(full_path)
 
-def main():
-    parser = argparse.ArgumentParser(description="Process some JSON files.")
-    parser.add_argument('base_dir', type=str, help='The base directory containing the JSON files')
-    args = parser.parse_args()
-    global search_dirs
-    search_dirs = [
-        os.path.abspath(os.path.join(args.base_dir, "../data")),
-        os.path.abspath(os.path.join(args.base_dir, "../StreamingAssets/data/itemCollections/"))
-    ]
-    matched_entries = process_Faction_Entry(args.base_dir)
+                add_file_contents(collection_name, csv_files_index, file_dict, file_dict[file_name], prefix)
+
+    return file_dict
+
+def add_file_contents(collection_name, csv_files_index, file_dict, current_file_lines, prefix):
+        # Read file and get its contents
+        csv_files_index[collection_name]
+        #print(csv_files_index)
+        with open(csv_files_index[collection_name], 'r') as file:
+            lines = file.readlines()
+        # Skip the first line
+        lines = lines[1:]
+        # Iterate over the lines in the file
+        for line in lines:
+            line = line.split(",")
+            if line[0].startswith(prefix):
+                add_file_contents(line[0], csv_files_index, file_dict, current_file_lines, prefix)
+            else: 
+                current_file_lines.append(line[0])
+            #print("Current state: \r\n", current_file_lines)
+            # If the line starts with the prefix, use the entire line as the file name
+                # Check if the referenced file exists in the secondary path
+#                if os.path.isfile(os.path.join(secondary_path, referenced_file)):
+#                    # Recursively add the contents of the referenced file
+#                    add_file_contents(referenced_file, secondary_path, file_dict, current_file_lines)
+
+def index_csv_files(directory):
+    csv_files = {}
     
-    print("Matched entries:", matched_entries)
+    # Walk through directory recursively
+    for root, _, files in os.walk(directory):
+        for file in files:
+            # Check if the file ends with .csv
+            if file.endswith('.csv'):
+                # Append the full file path to the list
+                csv_files[file[:-4]]=os.path.join(root, file)
+    
+    return csv_files
+
+if __name__ == "__main__":
+    result = process_files(sys.argv[1], sys.argv[2])
+    pp(result)
     """get rid of this for now   
     for item_name, entries in matched_entries.items():
         print(f"Processing {item_name} list:")
         for entry in entries:
             print(entry) """
 
-if __name__ == "__main__":
-    main()
