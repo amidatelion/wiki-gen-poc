@@ -1,4 +1,6 @@
 from jinja2 import Environment, FileSystemLoader
+import os
+import json
 
 
 environment = Environment(loader=FileSystemLoader("templates/"))
@@ -38,7 +40,6 @@ def render_factionstore(faction, items):
     ammunitions = []
     gears = []
     mechs = []
-    mechparts = []
     vehicles = []
     battlearmors = []
     contracts = []
@@ -47,12 +48,10 @@ def render_factionstore(faction, items):
             weapons.append(item)
         elif item.startswith("Ammo_"):
             ammunitions.append(item)
-        elif item.startswith("Gear_", "emod_")and not item.startswith("Gear_Contract_"):
+        elif item.startswith(("Gear_", "emod_")) and not item.startswith("Gear_Contract_"):
             gears.append(item)
         elif item.startswith("mechdef_") and not item.startswith("mechdef_ba"):
             mechs.append(item)
-        elif item.startswith("mechpartdef_"):
-            mechparts.append(item)
         elif item.startswith("vehicledef_"):
             vehicles.append(item)
         elif item.startswith("mechdef_ba"):
@@ -68,14 +67,17 @@ def render_factionstore(faction, items):
         gears[index] = get_display_name(item)
     for index, item in enumerate(mechs):
         mechs[index] = get_display_name(item)
-    for index, item in enumerate(mechparts):
-        mechparts[index] = get_display_name(item)
     for index, item in enumerate(vehicles):
         vehicles[index] = get_display_name(item)
     for index, item in enumerate(battlearmors):
         battlearmors[index] = get_display_name(item)
     for index, item in enumerate(contracts):
         contracts[index] = get_display_name(item)
+    
+    for index, item in enumerate(mechs):
+        mechs[index] = '#'.join(item.rsplit(' ', 1)) + '|' + item
+    for index, item in enumerate(vehicles):
+        vehicles[index] = '#'.join(item.rsplit(' ', 1)) + '|' + item
 
     context = {
     "faction_info": faction_info,
@@ -83,20 +85,18 @@ def render_factionstore(faction, items):
     "ammunitions": ammunitions,
     "gears": gears,
     "mechs": mechs,
-    "mechparts": mechparts,
     "vehicles": vehicles, 
     "battlearmors": battlearmors,
     "contracts": contracts,
     }
 
     with open(results_filename, mode="w", encoding="utf-8") as results:
-        results.write(results_template.render(context))
+        results.write(template.render(context))
         print(f"... wrote {results_filename}")
 
-
 def get_faction_specific_info(faction):
-    faction_lookup = {"Rasalhague": {"logo":"Cameron_logo.png", "name":"Terran Hegemony (Cameron)", "link":"Terran Hegemony"}},
-    return faction_lo          okup[faction]
+    faction_lookup = {"Rasalhague": {"logo":"Rasalhague_logo.png", "name":"Free Rasalhague Republic", "link":"Free Rasalhague Republic"}}
+    return faction_lookup[faction]
 
 def get_display_name(item):
     for root, dirs, files in os.walk(codebase_dir):
@@ -114,4 +114,3 @@ def get_display_name(item):
 if __name__ == "__main__":
     for faction,items in example_dict.items():
         render_factionstore(faction, items)
-        
