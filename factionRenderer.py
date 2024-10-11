@@ -2,12 +2,17 @@ from jinja2 import Environment, FileSystemLoader
 
 
 weapons = [
-    {"item": "[[Weapons#BA Light Recoilless Rifle|BA Light Recoilless Rifle]]</br>"},
-    {"item": "[[Weapons#Single Shot|BA Magshot Gauss Rifle]]</br>"},
-    {"item": "[[Weapons#BA Light Recoilless Rifle|BA Light Recoilless Rifle]]</br>"},
-    {"item": "[[Weapons#Single Shot|BA Magshot Gauss Rifle]]</br>"},
-    {"item": "[[Weapons#BA SMG|BA SMG]]</br>"},
-    {"item": "[[Weapons#Bomb Bays|Cluster Bomb]]</br>"},
+    {"item": "[[Weapons#Weapons#Cluster_Shot|Silver Bullet Gauss]]</br>"},
+    {"item": "[[Weapons#Hyper_Laser|Hyper Laser]]</br>"},
+    {"item": "[[Weapons#Weapons#X-Pulse_Lasers|Large X-Pulse Laser]]</br>"},
+    {"item": "[[Weapons#Weapons#X-Pulse_Lasers|Medium X-Pulse Laser]]</br>"},
+    {"item": "[[Weapons#Weapons#X-Pulse_Lasers|Small X-Pulse Laser]]</br>"},
+    {"item": "[[Weapons#MMLs|MML3]]</br>"},
+    {"item": "[[Weapons#MMLs|MML5]]</br>"},
+    {"item": "[[Weapons#MMLs|MML7]]</br>"},
+    {"item": "[[Weapons#MMLs|MML9]]</br>"},
+    {"item": "[[Weapons#PPCs|Snub-nosed PPC]]</br>"},
+    {"item": "[[mmunition#Gauss|Cluster Bomb]]</br>"},
     {"item": "[[Weapons#Bomb Bays|HiEx Bomb]]</br>"},
     {"item": "[[Weapons#Bomb Bays|Inferno Bomb]]</br>"},
     {"item": "[[Weapons#Mech Taser|Mech Taser]]</br>"},
@@ -19,26 +24,20 @@ weapons = [
     {"item": "[[Weapons#Ultra Autocannons|UAC/20]]</br>"},
 ]
 ammunitions = [
-    {"item": "[[Ammunition#|Ammo LRM ARTIV]]</br>"},
-    {"item": "[[Ammunition#|Ammo RAC/2]]</br>"},
-    {"item": "[[Ammunition#|Ammo RAC/2 [Half]]]</br>"},
-    {"item": "[[Ammunition#|Ammo RAC/5]]</br>"},
-    {"item": "[[Ammunition#|Ammo RAC/5 [Half]]]</br>"},
-    {"item": "[[Ammunition#|Ammo SRM ARTIV]]</br>"},
-    {"item": "[[Ammunition#|Ammo Taser]]</br>"},
-    {"item": "[[Ammunition#|Ammo UAC/2]]</br>"},
-    {"item": "[[Ammunition#|Ammo UAC/5]]</br>"},
-    {"item": "[[Ammunition#|Ammo UAC/10]]</br>"},
-    {"item": "[[Ammunition#|Ammo UAC/20]]</br>"},
+    {"item": "[[Ammunition#|Ammo SB Gauss]]</br>"},
+    {"item": "[[Ammunition#|Ammo LRM]]</br>"},
+    {"item": "[[Ammunition#|Ammo SRM]]</br>"},
+    {"item": "[[Ammunition#|Ammo Artemis IV LRM]]</br>"},
+    {"item": "[[Ammunition#|Ammo Artemis IV SRM]]</br>"},
 ]
 gears = [
     {"item": "[[Weapon_Attachments#Artemis IV FCS|Artemis IV FCS]]</br>"},
-    {"item": "[[Weapon_Attachments#Autocannon FCS|Autocannon FCS]]</br>"},
-    {"item": "[[Foot_Actuators#Foot Roundhouse + +|Foot Roundhouse + +]]</br>"},
-    {"item": "[[Cooling#Heat Sink Freezer (D)|Heat Sink Freezer (D)]]</br>"},
-    {"item": "[[Lower_Leg_Actuators#Lower Leg Muay Thai + +|Lower Leg Muay Thai + +]]</br>"},
-    {"item": "[[Shoulder_Actuators#Shoulder Tackle + +|Shoulder Tackle + +]]</br>"},
-    {"item": "{{Highlight|[[Armor#Ultra Ferro-Fibrous Armor|Ultra Ferro]]|LightBlue}}</br>"},
+    {"item": "[[CASE#CASE_II|CASE II]]</br>"},
+    {"item": "[[ECM#Viral_Jammer|Viral Jammer]]</br>"},
+    {"item": "[[Cooling#Coolant_Pod|Coolant Pod]]</br>"},
+    {"item": "[[Cooling#Radical Heat Sink|Radical Heat Sink]]</br>"},
+    {"item": "[[Cooling#Heat_Sink_Kit_.28DHS.29|DHS Kit]]</br>"},
+    {"item": "{{Highlight|[[Heat_Sink_.28D.29|Heat Sink (D)]]|LightBlue}}</br>"},
     {"item": "[[Upper_Arm_Actuators#Upper Arm Impede + +|Upper Arm Impede + +]]</br>"}
 ]
 mechs = [
@@ -80,7 +79,7 @@ battlearmors = [
     {"item": "[[Infiltrator Mk II Battle Armor#|Infiltrator Mk II Battle Armor]]</br>"}
 ]
 contracts = [
-    {"item": "[[Contracts#Contract for Challenger Tank Airdrop|Contract for Challenger Tank Airdrop]]</br>"},
+    {"item": "[[Contracts#Contract for Mackie II Airdrop|Contract for Mackie II Airdrop]]</br>"},
     {"item": "[[Contracts#Contract for Templar Airdrop|Contract for Templar Airdrop]]</br>"},
     {"item": "[[Contracts#Permanent Contract for Grenadier BA Airdrop|Permanent Contract for Grenadier BA Airdrop]]</br>"},
     {"item": "[[Contracts#Permanent Contract for Infiltrator Mk II BA Airdrop|Permanent Contract for Infiltrator Mk II BA Airdrop]]</br>"}
