@@ -4,7 +4,7 @@ import json
 
 
 environment = Environment(loader=FileSystemLoader("templates/"))
-template = environment.get_template("pretty.tpl")
+template = environment.get_template("factionStore.tpl")
 
 example_dict =  {'Rasalhague.json': ['Weapon_Autocannon_LB10XAC',
                      'Weapon_PPC_PPC_SNUBNOSE',
