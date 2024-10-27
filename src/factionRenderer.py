@@ -15,30 +15,7 @@ page_title = "Your_Page_Title"
 environment = Environment(loader=FileSystemLoader("../templates/"))
 template = environment.get_template("factionStore.tpl")
 
-example_dict =  {'Rasalhague.json': ['Weapon_Autocannon_LB10XAC',
-                     'Weapon_PPC_PPC_SNUBNOSE',
-                     'Weapon_Autocannon_UAC5_0-STOCK',
-                     'Weapon_SRM_SSRM2_0-STOCK',
-                     'Ammo_AmmunitionBox_LBX_CLUSTER_AC10',
-                     'Ammo_AmmunitionBox_LBX_SLUG_AC10',
-                     'Ammo_AmmunitionBox_Ultra_AC5',
-                     'Ammo_AmmunitionBox_Streak_SRM',
-                     'mechdef_viking_VKG-2F',
-                     'mechdef_vonrohrs_VON-4RH-5',
-                     'mechdef_vonrohrs_VON-4RH-6',
-                     'vehicledef_REDKITE',
-                     'vehicledef_UNNSVIN',
-                     'vehicledef_UNNSVIN_BALLISTIC',
-                     'vehicledef_UNNSVIN_MISSILE',
-                     'vehicledef_TAGDRONE',
-                     'vehicledef_VTOLDRONE',
-                     'mechdef_ba_krupp',
-                     'Weapon_Medium_Recoilless_BA',
-                     'Gear_Attachment_AutocannonFCS',
-                     'Gear_Attachment_PPCFCS',
-                     'Gear_Contract_Mech_Gunslinger_FRR',
-                     'Gear_Contract_BattleArmor_Krupp_Rasalhague']}
-
+# Needs to be changed for GitAction Implementation
 codebase_dir = "/home/eadderley/fungit/BattleTech-Advanced"
 
 def render_factionstore(faction, items):
@@ -59,11 +36,11 @@ def render_factionstore(faction, items):
             ammunitions.append(item)
         elif item.startswith(("Gear_", "emod_")) and not item.startswith("Gear_Contract_"):
             gears.append(item)
-        elif item.startswith("mechdef_") and not item.startswith("mechdef_ba"):
+        elif item.startswith("mechdef_") and not item.startswith("mechdef_ba_"):
             mechs.append(item)
         elif item.startswith("vehicledef_"):
             vehicles.append(item)
-        elif item.startswith("mechdef_ba"):
+        elif item.startswith("mechdef_ba_"):
             battlearmors.append(item)
         elif item.startswith("Gear_Contract_"):
             contracts.append(item)
@@ -99,8 +76,10 @@ def render_factionstore(faction, items):
     "contracts": contracts,
     }
 
+    # Wiki page writing
     page_title = "Template:FS" + faction_name
     factionPoster.post_to_wiki(page_title, template.render(context))
+    # Local file writing
     #with open(results_filename, mode="w", encoding="utf-8") as results:
     #    results.write(template.render(context))
     #    print(f"... wrote {results_filename}")
