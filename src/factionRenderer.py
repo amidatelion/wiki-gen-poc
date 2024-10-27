@@ -104,7 +104,7 @@ def get_faction_specific_info(faction):
     "Illyrian": {"logo": "Illyrian_logo.png", "name": "Illyrian Palatinate", "link": "Illyrian Palatinate"},
     "JacobsonHaven": {"logo": "JacobsonHaven_logo.png", "name": "Jacobson Haven", "link": "Jacobson Haven"},
     "JarnFolk": {"logo": "JarnFolk_logo.png", "name": "JàrnFòlk", "link": "JàrnFòlk"},
-    "Lothian": {"logo": "Lothian_League_logo.png", "name": "Lothian League", "link": "Lothian League"},
+    "Lothian": {"logo": "Lothian_logo.png", "name": "Lothian League", "link": "Lothian League"},
     "Steiner": {"logo": "Steiner_logo.png", "name": "Lyran Commonwealth (Steiner)", "link": "Lyran Commonwealth"},
     "Magistracy": {"logo": "MagistracyOfCanopus_logo.png", "name": "Magistracy of Canopus", "link": "Magistracy of Canopus"},
     "MallardRepublic": {"logo": "MallardRepublic_logo.png", "name": "Mallard Republic", "link": "Mallard Republic"},
