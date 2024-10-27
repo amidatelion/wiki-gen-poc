@@ -21,7 +21,7 @@ Basically works like Iteration 4 except now
 ### Out of Scope
 
 1. I think there's a way to get the weapon data into semi-useful tables in an automated fashion what's dumped in by the exporter via Lua modules, but I expect we'd need to drop columns, so more stuff for BD to approve. 
-2. server updates to allow stuff like this to run on the scale of the List of Mechs without blowing up
+2. ~~server updates to allow stuff like this to run on the scale of the List of Mechs without blowing up~~ Works fine for Faction Stores! 🎉
 
 <details>
 <summary>Iteration 4</summary>
