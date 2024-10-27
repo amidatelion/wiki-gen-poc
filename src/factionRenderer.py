@@ -7,7 +7,7 @@ import factionPoster
 from pprint import pp
 
 
-environment = Environment(loader=FileSystemLoader("../templates/"))
+environment = Environment(loader=FileSystemLoader("/home/runner/work/wiki-actions-poc/wiki-actions-poc/wiki-gen-poc/templates/"))
 template = environment.get_template("factionStore.tpl")
 
 # Needs to be changed for GitAction Implementation
