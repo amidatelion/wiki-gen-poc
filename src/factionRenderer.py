@@ -138,6 +138,6 @@ def get_display_name(item):
 
 if __name__ == "__main__":
     results = factionParser.process_files("/home/runner/work/wiki-actions-poc/wiki-actions-poc/bta/DynamicShops/fshops", "itemCollection_")
-    pp(results)
+    #pp(results)
     for faction,items in results.items():
         render_factionstore(faction, items)
