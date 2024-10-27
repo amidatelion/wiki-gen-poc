@@ -56,7 +56,7 @@ def render_factionstore(faction, items):
         contracts[index] = get_display_name(item)
     
     for index, item in enumerate(mechs):
-        print(mechs[index])
+        print("Printing out mechsindex:", mechs[index])
         mechs[index] = '#'.join(item.rsplit(' ', 1)) + '|' + item
     for index, item in enumerate(vehicles):
         vehicles[index] = '#'.join(item.rsplit(' ', 1)) + '|' + item
