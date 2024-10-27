@@ -27,7 +27,7 @@ def process_files(primary_path, prefix):
 def add_file_contents(collection_name, csv_files_index, file_dict, current_file_lines, prefix):
         # Read file and get its contents
         csv_files_index[collection_name]
-        print(csv_files_index[collection_name])
+        #print(csv_files_index[collection_name])
         with open(csv_files_index[collection_name], 'r') as file:
             lines = file.readlines()
         # Skip the first line

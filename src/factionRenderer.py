@@ -56,7 +56,7 @@ def render_factionstore(faction, items):
         contracts[index] = get_display_name(item)
     
     for index, item in enumerate(mechs):
-        print("Printing out mechsindex:", mechs[index])
+        #print("Printing out mechsindex:", mechs[index])
         mechs[index] = '#'.join(item.rsplit(' ', 1)) + '|' + item
     for index, item in enumerate(vehicles):
         vehicles[index] = '#'.join(item.rsplit(' ', 1)) + '|' + item
@@ -138,5 +138,6 @@ def get_display_name(item):
 
 if __name__ == "__main__":
     results = factionParser.process_files("/home/runner/work/wiki-actions-poc/wiki-actions-poc/bta/DynamicShops/fshops", "itemCollection_")
+    pp(results)
     for faction,items in results.items():
         render_factionstore(faction, items)
