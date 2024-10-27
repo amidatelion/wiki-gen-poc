@@ -11,7 +11,7 @@ def process_Faction_Collection(file_path):
 
 def process_files(primary_path, prefix):
     file_dict = {}
-    csv_files_index = index_csv_files("../DynamicShops/")
+    csv_files_index = index_csv_files("/home/runner/bta/DynamicShops/")
     # Iterate through files in primary path and process each
     for file_name in os.listdir(primary_path):
         full_path = os.path.join(primary_path, file_name)

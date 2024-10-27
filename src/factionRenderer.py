@@ -11,7 +11,7 @@ environment = Environment(loader=FileSystemLoader("../templates/"))
 template = environment.get_template("factionStore.tpl")
 
 # Needs to be changed for GitAction Implementation
-codebase_dir = "/home/eadderley/fungit/BattleTech-Advanced"
+codebase_dir = "/home/runner/bta"
 
 def render_factionstore(faction, items):
     faction_name = faction[:-5]
@@ -136,6 +136,6 @@ def get_display_name(item):
 
 
 if __name__ == "__main__":
-    results = factionParser.process_files("../DynamicShops/fshops", "itemCollection_")
+    results = factionParser.process_files("/home/runner/bta/DynamicShops/fshops", "itemCollection_")
     for faction,items in results.items():
         render_factionstore(faction, items)
