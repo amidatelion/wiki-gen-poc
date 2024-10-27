@@ -6,11 +6,6 @@ import factionParser
 import factionPoster
 from pprint import pp
 
-api_url = "https://bta3062.com/api.php"
-username = os.getenv("WIKI_USER")
-password = os.getenv("WIKI_PASS")
-
-page_title = "Your_Page_Title"
 
 environment = Environment(loader=FileSystemLoader("../templates/"))
 template = environment.get_template("factionStore.tpl")
@@ -135,8 +130,7 @@ def get_display_name(item):
                 file_path = os.path.join(root, file)
                 with open(file_path, 'r') as json_file:
                     data = json.load(json_file)
-                    # Check if 'Description' and 'UIName' exist
-                    #pp(data)
+                    # Use UIName if available, otherwise use Name because fucking vehicledefs
                     ui_name = data['Description'].get('UIName', data['Description'].get('Name'))
                     return ui_name
 
