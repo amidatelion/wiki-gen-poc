@@ -1,5 +1,6 @@
 BTA_List_Victoria,,,
 emod_engine_375,HeatSink,0,10
+emod_engine_175,HeatSink,0,10
 emod_engine_120,HeatSink,0,10
 emod_engineslots_xl_center,HeatSink,0,10
 Weapon_Laser_LargeLaserER_0-STOCK,Weapon,0,10
@@ -15,3 +16,5 @@ mechdef_laohu_LHU-3B,Mech,1,10
 mechdef_laohu_LHU-3C,Mech,1,10
 mechdef_koschei_KSC-4I,Mech,1,10
 mechdef_koschei_KSC-4L,Mech,1,10
+mechdef_duangung_D9-G9,Mech,1,10
+mechdef_jinggau_JN-G8A,Mech,1,10

@@ -17,6 +17,7 @@ mechdef_charger_CGR-N7,Mech,1,8
 mechdef_banshee_BNC-SR,Mech,1,8
 mechdef_corsair_COR-RA,Mech,1,8
 mechdef_fafnir_FNR-WR,Mech,1,8
+mechdef_hatamotochi_HTM-SAM,Mech,1,8
 mechdef_hatamotochi_HTM-SG,Mech,1,8
 mechdef_highlander_HGN-HM,Mech,1,8
 mechdef_kingcrab_KGC-KJ,Mech,1,8
@@ -40,3 +41,7 @@ mechdef_stonerhino_STR-FH,Mech,1,8
 mechdef_stonerhino_STR-SR,Mech,1,8
 mechdef_juggernaut_JG-OG,Mech,1,8
 mechdef_juggernaut_JG-SNP,Mech,1,8
+mechdef_colossalturtle_CTR-1,Mech,1,8
+mechdef_sirocco_SRC-AU,Mech,1,8
+mechdef_riflemaniii_RF2-AC,Mech,1,8
+mechdef_greatturtle_GTR-TOR,Mech,1,8

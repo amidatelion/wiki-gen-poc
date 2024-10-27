@@ -2,7 +2,7 @@
 	{
 		"conditions": {
 			"tag": "planet_pop_small",
-			"owner": "the Hegemony",
+			"owner": "the Marian Hegemony",
 			"rep": "+liked"
 		},
 		"items": "BTA_Liked_Periphery"
@@ -10,7 +10,7 @@
 	{
 		"conditions": {
 			"tag": "planet_pop_large",
-			"owner": "the Hegemony",
+			"owner": "the Marian Hegemony",
 			"rep": "+liked"
 		},
 		"items": "BTA_Liked_Periphery"
@@ -18,7 +18,7 @@
 	{
 		"conditions": {
 			"tag": "planet_pop_medium",
-			"owner": "the Hegemony",
+			"owner": "the Marian Hegemony",
 			"rep": "+liked"
 		},
 		"items": "BTA_Liked_Periphery"
@@ -26,7 +26,7 @@
 	{
 		"conditions": {
 			"tag": "planet_pop_large",
-			"owner": "the Hegemony",
+			"owner": "the Marian Hegemony",
 			"rep": "HONORED"
 		},
 		"items": "BTA_Honored_Marian"
@@ -34,28 +34,28 @@
 	{
 		"conditions": {
 			"tag": "planet_pop_medium",
-			"owner": "the Hegemony",
+			"owner": "the Marian Hegemony",
 			"rep": "HONORED"
 		},
 		"items": "BTA_Honored_Marian"
 	},
 	{
 		"conditions": {
-			"owner": "the Hegemony",
+			"owner": "the Marian Hegemony",
 			"rep": "+liked"
 		},
 		"items": "itemCollection_Tanks_faction_Marian"
 	},
 	{
 		"conditions": {
-			"owner": "the Hegemony",
+			"owner": "the Marian Hegemony",
 			"rep": "+FRIENDLY"
 		},
 		"items": "itemCollection_Tanks_faction_Marian_Heavy"
 	},
 	{
 		"conditions": {
-			"owner": "the Hegemony",
+			"owner": "the Marian Hegemony",
 			"rep": "+FRIENDLY"
 		},
 		"items": "itemCollection_major_Marian"

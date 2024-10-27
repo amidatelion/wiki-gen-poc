@@ -14,6 +14,12 @@ Weapon_Laser_LargeLaserER_0-STOCK,Weapon,0,10
 Weapon_Laser_LargeLaserPulse_0-STOCK,Weapon,0,10
 mechdef_firestarter_O-PRIME,Mech,1,10
 mechdef_blackhawkku_BHKU-O,Mech,1,10
-mechdef_avatar_AV1-0,Mech,1,10
+mechdef_avatar_AV1-O,Mech,1,10
+mechdef_balar_BA1-O,Mech,1,10
 mechdef_wolverine_WVR-8C,Mech,1,10
 mechdef_wolverine_WVR-8K,Mech,1,10
+mechdef_naginata_NG-C3A,Mech,1,10
+mechdef_naginata_NG-C3B,Mech,1,10
+mechdef_naginata_NG-C3C,Mech,1,10
+mechdef_chimera_CMA-1S,Mech,1,10
+mechdef_chimera_CMA-C,Mech,1,10

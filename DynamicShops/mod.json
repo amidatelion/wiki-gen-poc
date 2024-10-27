@@ -31,6 +31,7 @@
 					"Liao",
 					"Marik",
 					"Steiner",
+					"Cameron",
 					"ComStar",
 					"Word of Blake",
 					"St. Ives",
@@ -40,7 +41,7 @@
 			{
 				"Name": "Periphery",
 				"Members": [
-					"the Hegemony",
+					"the Marian Hegemony",
 					"the Magistracy",
 					"the Taurian",
 					"the Coalition",
@@ -50,7 +51,8 @@
 					"Lothia",
 					"Illyria",
 					"FroncReaches",
-					"CalderonProtectorate"
+					"CalderonProtectorate",
+					"RWR"
 				]
 			},
 			{
@@ -74,7 +76,10 @@
 					"Jade Falcon",
 					"Nova Cat",
 					"Snow Raven",
+					"Goliath Scorpion",
 					"Diamond Shark",
+					"Scorpion Empire",
+					"Fire Mandrill",
 					"Dark Caste",
 					"Clans"
 				]

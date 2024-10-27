@@ -9,3 +9,8 @@ venv.bak/
 
 # wikifiles
 *.wiki
+
+# python files
+__pycache__/
+*.py[cod]
+*$py.class

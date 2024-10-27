@@ -95,6 +95,12 @@
 	},
 	{
 		"conditions": {
+			"tag": "planet_name_molokai"
+		},
+		"items": "BTA_List_Molokai"
+	},
+	{
+		"conditions": {
 			"tag": "planet_name_oliver"
 		},
 		"items": "BTA_List_Oliver"
@@ -152,5 +158,17 @@
 			"tag": "planet_name_newdallas"
 		},
 		"items": "BTA_List_NewDallas"
+	},
+	{
+		"conditions": {
+			"tag": "planet_name_silver"
+		},
+		"items": "BTA_List_Silver"
+	},
+	{
+		"conditions": {
+			"tag": "planet_name_tongatapu"
+		},
+		"items": "BTA_List_Tongatapu"
 	}
 ]

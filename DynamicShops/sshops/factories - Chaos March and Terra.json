@@ -2,10 +2,16 @@
 	{
 		"conditions": {
 			"tag": "planet_name_terra",
-			"owner": "Word of Blake",
+			"owner": "Cameron",
 			"rep": "+FRIENDLY"
 		},
 		"items": "BTA_List_Terra"
+	},
+	{
+		"conditions": {
+			"tag": "planet_name_terra"
+		},
+		"items": "BTA_List_RattlerFight"
 	},
 	{
 		"conditions": {

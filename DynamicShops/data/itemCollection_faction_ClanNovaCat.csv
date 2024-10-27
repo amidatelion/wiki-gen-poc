@@ -10,8 +10,17 @@ mechdef_NovaCat_NCT-C,Mech,1,10
 mechdef_NovaCat_NCT-D,Mech,1,10
 mechdef_NovaCat_NCT-E,Mech,1,10
 mechdef_NovaCat_NCT-M,Mech,1,10
+mechdef_huntsman_HMN-PRIME,Mech,1,10
+mechdef_huntsman_HMN-A,Mech,1,10
+mechdef_huntsman_HMN-B,Mech,1,10
+mechdef_huntsman_HMN-C,Mech,1,10
+mechdef_huntsman_HMN-D,Mech,1,10
+mechdef_huntsman_HMN-H,Mech,1,10
+mechdef_huntsman_HMN-N,Mech,1,10
 mechdef_ba_salamander,Mech,0,10
 mechdef_ba_elemental,Mech,0,10
+BTAClan_Weapons_Rare,Reference,3,10
+BTA_Ammo_Rare_Clan,Reference,2,10
 Weapon_Flamer_Flamer_BA_Clan,Weapon,0,10
 Weapon_SRM_SRM1_Inferno_BA_Clan,Weapon,0,10
 Weapon_Laser_SmallLaserER_BA_Clan,Weapon,0,10
