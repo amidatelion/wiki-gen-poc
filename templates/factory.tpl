@@ -1,5 +1,5 @@
 ! {{planet_name}}
-! {{owner}}
+! {{owner_name}}
 ! {{reputation}}
 | {% for weapon in weapons -%}
 [[ Weapons|{{weapon}} ]]</br>
@@ -13,7 +13,6 @@
 | {% for mech in mechs -%}
 [[{{ mech }}]]</br>
 {%- endfor %}
-| None
 | {% for vehicle in vehicles -%}
 [[{{ vehicle }}]]</br>
 {%- endfor %}
@@ -23,3 +22,4 @@
 | {% for contract in contracts -%}
 [[ Contracts|{{ contract }}]]</br>
 {%- endfor %}
+|-

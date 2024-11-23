@@ -2,38 +2,51 @@ import os
 import sys
 import json
 from pprint import pp
+import genUtilities
 
-def process_Faction_Collection(file_path):
-    with open(file_path, "r") as json_file:
-        data = json.load(json_file)
-        item_name = data[0].get("items")
-        return item_name
+prefix = "itemCollection_"
 
-def process_files(primary_path, prefix):
-    file_dict = {}
-    csv_files_index = index_csv_files("/home/runner/work/wiki-actions-poc/wiki-actions-poc/bta/DynamicShops/")
+def process_files(primary_path):
+    factory_dict = {}
+    #csv_files_index = genUtilities.index_csv_files("/home/runner/work/wiki-actions-poc/wiki-actions-poc/bta/DynamicShops/")
+    csv_files_index = genUtilities.index_csv_files(["../DynamicShops/", "../Community Content/"])
     # Iterate through files in primary path and process each
     for file_name in os.listdir(primary_path):
         full_path = os.path.join(primary_path, file_name)
         if os.path.isfile(full_path):
-            file_dict[file_name] = []
-            if file_name.endswith(".json"):
-                collection_name = process_Faction_Collection(full_path)
+            #file_dict[file_name] = []
+            if file_name.startswith("factories"):
+                process_Factory_Collections(full_path, factory_dict)
+    for location, data in factory_dict.items():
+        #print("this is the location:", location)
+        if "items" in data:
+            data["items"] = add_factory_contents(data["items"], csv_files_index, factory_dict, prefix)
 
-                add_file_contents(collection_name, csv_files_index, file_dict, file_dict[file_name], prefix)
+    return factory_dict
 
-    return file_dict
-
-def process_factory_files(primary_path, prefix):
-   # no, need to write this so that each file is added to a master dict
-
-def process_Factory_Collections(full_path):
+def process_Factory_Collections(full_path, factory_dict):
     with open(full_path, "r") as json_file:
         data = json.load(json_file)
+        #print("this is the data:\r\n", data)
+        for block in data:
+            #print("this is the block:\r\n", block)
+            name = block.get('name')  # Safely fetch 'name'
+            if name:  # Proceed only if 'name' exists
+                conditions = block.get('conditions', {})
+                factory_dict[name] = {
+                    "owner": conditions.get("owner", None),
+                    "rep": conditions.get("rep", None),
+                    "items": block.get("items", None)  # Safely fetch 'items'
+                }
+                #print("this is the factory dict:\r\n", factory_dict)
+            #print("this is the factory dict:\r\n", factory_dict)
+            #pp(factory_dict)
+ 
+    #pp(factory_dict)
+    return factory_dict
 
-def add_factory_contents()
-
-def add_file_contents(collection_name, csv_files_index, file_dict, current_file_lines, prefix):
+def add_factory_contents(collection_name, csv_files_index, file_dict, prefix):
+        item_collection_list = []
         # Read file and get its contents
         csv_files_index[collection_name]
         #print(csv_files_index[collection_name])
@@ -45,32 +58,28 @@ def add_file_contents(collection_name, csv_files_index, file_dict, current_file_
         for line in lines:
             line = line.split(",")
             if line[0].startswith(prefix):
-                add_file_contents(line[0], csv_files_index, file_dict, current_file_lines, prefix)
+                add_factory_contents(line[0], csv_files_index, file_dict, prefix)
             else: 
-                current_file_lines.append(line[0])
-            #print("Current state: \r\n", current_file_lines)
-            # If the line starts with the prefix, use the entire line as the file name
-                # Check if the referenced file exists in the secondary path
-#                if os.path.isfile(os.path.join(secondary_path, referenced_file)):
-#                    # Recursively add the contents of the referenced file
-#                    add_file_contents(referenced_file, secondary_path, file_dict, current_file_lines)
+                item_collection_list.append(line[0])
+        return item_collection_list
 
-def index_csv_files(directory):
+def index_csv_files(directories):
     csv_files = {}
     
-    # Walk through directory recursively
-    for root, _, files in os.walk(directory):
-        for file in files:
-            # Check if the file ends with .csv
-            if file.endswith('.csv'):
-                # Append the full file path to the list
-                csv_files[file[:-4]]=os.path.join(root, file)
+    # Walk through directories recursively
+    for directory in directories:
+        for root, _, files in os.walk(directory):
+            for file in files:
+                # Check if the file ends with .csv
+                if file.endswith('.csv'):
+                    # Append the full file path to the list
+                    csv_files[file[:-4]]=os.path.join(root, file)
     
     return csv_files
 
 if __name__ == "__main__":
-    result = process_files(sys.argv[1], sys.argv[2])
-    pp(result)
+    result = process_files(sys.argv[1])
+    #pp(result)
     """get rid of this for now   
     for item_name, entries in matched_entries.items():
         print(f"Processing {item_name} list:")

@@ -1,5 +1,6 @@
 [
 	{
+		"name": "Taurus",
 		"conditions": {
 			"tag": "planet_name_taurus",
 			"owner": "the Taurians",
@@ -8,36 +9,42 @@
 		"items": "BTA_List_Taurus"
 	},
 	{
+		"name": "Sterope (New Taurus)",
 		"conditions": {
 			"tag": "planet_name_sterope(newtaurus)"
 		},
 		"items": "BTA_List_Sterope"
 	},
 	{
+		"name": "Pinard",
 		"conditions": {
 			"tag": "planet_name_pinard"
 		},
 		"items": "BTA_List_Pinard"
 	},
 	{
+		"name": "Perdition",
 		"conditions": {
 			"tag": "planet_name_perdition"
 		},
 		"items": "BTA_List_Perdition"
 	},
 	{
+		"name": "New Vandenburg",
 		"conditions": {
 			"tag": "planet_name_newvandenburg"
 		},
 		"items": "BTA_List_NewVandenburg"
 	},
 	{
+		"name": "MacLeod's Land",
 		"conditions": {
 			"tag": "planet_name_macleodsland"
 		},
 		"items": "BTA_List_MacLeod"
 	},
 	{
+		"name": "Illiushin",
 		"conditions": {
 			"tag": "planet_name_illiushin"
 		},

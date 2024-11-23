@@ -1,4 +1,7 @@
 BTA_List_Errai,,,
+emod_engine_160,HeatSink,0,10
 Weapon_SRM_SRM6_0-STOCK,Weapon,0,10
+Weapon_Laser_SmallLaserPulse_X,Weapon,0,10
 mechdef_wyvern_WVE-10N,Mech,1,10
 mechdef_thug_THG-12E,Mech,1,10
+mechdef_mercury_MCY-101,Mech,1,10

@@ -1,5 +1,9 @@
 import os
 import requests
+import json
+
+#codebase_dir = "/home/runner/work/wiki-actions-poc/wiki-actions-poc/bta"
+codebase_dir = "../../BattleTech-Advanced/"
 
 # deeply ugly login function
 def post_to_wiki(page_title, page_content):
@@ -74,3 +78,30 @@ def post_to_wiki(page_title, page_content):
     else:
         print("Failed to edit page:", edit_resp.json())
         return False
+    
+def index_csv_files(directories):
+    csv_files = {}
+    
+    # Walk through directories recursively
+    for directory in directories:
+        for root, _, files in os.walk(directory):
+            for file in files:
+                # Check if the file ends with .csv
+                if file.endswith('.csv'):
+                    # Append the full file path to the list
+                    csv_files[file[:-4]]=os.path.join(root, file)
+    
+    return csv_files
+
+
+def get_display_name(item):
+    for root, dirs, files in os.walk(codebase_dir):
+        for file in files:
+            # Check if the file is the target JSON file
+            if file == item+".json":
+                file_path = os.path.join(root, file)
+                with open(file_path, 'r') as json_file:
+                    data = json.load(json_file)
+                    # Use UIName if available, otherwise use Name because fucking vehicledefs
+                    ui_name = data['Description'].get('UIName', data['Description'].get('Name'))
+                    return ui_name

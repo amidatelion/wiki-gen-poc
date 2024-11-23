@@ -1,5 +1,6 @@
 [
 	{
+		"name": "Detroit",
 		"conditions": {
 			"tag": "planet_name_detroit",
 			"owner": "the Magistracy"
@@ -7,6 +8,7 @@
 		"items": "BTA_List_Detroit"
 	},
 	{
+		"name": "Canopus",
 		"conditions": {
 			"tag": "planet_name_canopus",
 			"owner": "the Magistracy",
@@ -15,18 +17,21 @@
 		"items": "BTA_List_Canopus"
 	},
 	{
+		"name": "Dunianshire",
 		"conditions": {
 			"tag": "planet_name_dunianshire"
 		},
 		"items": "BTA_List_Dunianshire"
 	},
 	{
+		"name": "Marantha",
 		"conditions": {
 			"tag": "planet_name_marantha"
 		},
 		"items": "BTA_List_Marantha"
 	},
 	{
+		"name": "Port Rime",
 		"conditions": {
 			"tag": "planet_name_portrime"
 		},

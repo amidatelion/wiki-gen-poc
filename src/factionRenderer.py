@@ -3,14 +3,16 @@ import os
 import json
 import requests
 import factionParser
-import factionPoster
+import genUtilities
 from pprint import pp
 
 
+#environment = Environment(loader=FileSystemLoader("../templates/"))
 environment = Environment(loader=FileSystemLoader("/home/runner/work/wiki-actions-poc/wiki-actions-poc/wiki-gen-poc/templates/"))
 template = environment.get_template("factionStore.tpl")
 
 # Needs to be changed for GitAction Implementation
+#codebase_dir = "../../BattleTech-Advanced/"
 codebase_dir = "/home/runner/work/wiki-actions-poc/wiki-actions-poc/bta"
 
 def render_factionstore(faction, items):
@@ -41,19 +43,19 @@ def render_factionstore(faction, items):
             contracts.append(item)
     
     for index, item in enumerate(weapons):
-        weapons[index] = get_display_name(item)
+        weapons[index] = genUtilities.get_display_name(item)
     for index, item in enumerate(ammunitions):
-        ammunitions[index] = get_display_name(item)
+        ammunitions[index] = genUtilities.get_display_name(item)
     for index, item in enumerate(gears):
-        gears[index] = get_display_name(item)
+        gears[index] = genUtilities.get_display_name(item)
     for index, item in enumerate(mechs):
-        mechs[index] = get_display_name(item)
+        mechs[index] = genUtilities.get_display_name(item)
     for index, item in enumerate(vehicles):
-        vehicles[index] = get_display_name(item)
+        vehicles[index] = genUtilities.get_display_name(item)
     for index, item in enumerate(battlearmors):
-        battlearmors[index] = get_display_name(item)
+        battlearmors[index] = genUtilities.get_display_name(item)
     for index, item in enumerate(contracts):
-        contracts[index] = get_display_name(item)
+        contracts[index] = genUtilities.get_display_name(item)
     
     for index, item in enumerate(mechs):
         #print("Printing out mechsindex:", mechs[index])
@@ -62,19 +64,19 @@ def render_factionstore(faction, items):
         vehicles[index] = '#'.join(item.rsplit(' ', 1)) + '|' + item
 
     context = {
-    "faction_info": faction_info,
-    "weapons": weapons,
-    "ammunitions": ammunitions,
-    "gears": gears,
-    "mechs": mechs,
-    "vehicles": vehicles, 
-    "battlearmors": battlearmors,
-    "contracts": contracts,
+        "faction_info": faction_info,
+        "weapons": weapons,
+        "ammunitions": ammunitions,
+        "gears": gears,
+        "mechs": mechs,
+        "vehicles": vehicles, 
+        "battlearmors": battlearmors,
+        "contracts": contracts,
     }
 
     # Wiki page writing
     page_title = "Template:FS" + faction_name
-    factionPoster.post_to_wiki(page_title, template.render(context))
+    genUtilities.post_to_wiki(page_title, template.render(context))
     # Local file writing
     #with open(results_filename, mode="w", encoding="utf-8") as results:
     #    results.write(template.render(context))
@@ -123,20 +125,8 @@ def get_faction_specific_info(faction):
     }
     return faction_lookup[faction]
 
-def get_display_name(item):
-    for root, dirs, files in os.walk(codebase_dir):
-        for file in files:
-            # Check if the file is the target JSON file
-            if file == item+".json":
-                file_path = os.path.join(root, file)
-                with open(file_path, 'r') as json_file:
-                    data = json.load(json_file)
-                    # Use UIName if available, otherwise use Name because fucking vehicledefs
-                    ui_name = data['Description'].get('UIName', data['Description'].get('Name'))
-                    return ui_name
-
-
 if __name__ == "__main__":
+    #results = factionParser.process_files("../DynamicShops/fshops", "itemCollection_")
     results = factionParser.process_files("/home/runner/work/wiki-actions-poc/wiki-actions-poc/bta/DynamicShops/fshops", "itemCollection_")
     #pp(results)
     for faction,items in results.items():

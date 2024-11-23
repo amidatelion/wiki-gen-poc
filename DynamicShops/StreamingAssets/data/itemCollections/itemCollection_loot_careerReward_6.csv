@@ -1,5 +1,5 @@
 itemCollection_loot_careerReward_6,"Career Reward: Kerensky","Career Reward: Kerensky",
-BTA_List_SLDF,Reference,4,1
-BTA_SLDF,Reference,2,1
-BTA_JumpJetsSpecial,Reference,2,1
-BTA_SLDF_Mechs,Reference,2,1
+Gear_All_The_Money,Upgrade,1,1
+BTA_JohannsJaegers_Mechs,Reference,1,1
+BTA_List_HeroMechs_Reward,Reference,1,1
+mechdef_orion_ON1-P,Mech,1,1

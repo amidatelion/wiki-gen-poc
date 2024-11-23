@@ -12,9 +12,11 @@ Weapon_LRM_NLRM5_0-STOCK,Weapon,0,10
 Weapon_LRM_NLRM10_0-STOCK,Weapon,0,10
 Weapon_LRM_NLRM15_0-STOCK,Weapon,0,10
 Weapon_LRM_NLRM20_0-STOCK,Weapon,0,10
+Weapon_Gauss_Experimental_0-STOCK,Weapon,0,10
 Ammo_AmmunitionBox_Generic_SBGAUSS,AmmunitionBox,0,1
 Ammo_AmmunitionBox_Generic_MAGSHOT,AmmunitionBox,0,1
 Ammo_AmmunitionBox_Generic_HGAUSS,AmmunitionBox,0,1
+Ammo_AmmunitionBox_Generic_SUGAUSS,AmmunitionBox,0,1
 Ammo_AmmunitionBox_Generic_LRM,AmmunitionBox,0,1
 Ammo_AmmunitionBox_ArtemisIV_LRM,AmmunitionBox,0,1
 Ammo_AmmunitionBox_ArtemisIV_SRM,AmmunitionBox,0,1

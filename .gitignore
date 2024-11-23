@@ -10,7 +10,12 @@ venv.bak/
 # wikifiles
 *.wiki
 
+# BTA exclusions
+Community Content/
+DynamicShops/
+
 # python files
 __pycache__/
 *.py[cod]
 *$py.class
+

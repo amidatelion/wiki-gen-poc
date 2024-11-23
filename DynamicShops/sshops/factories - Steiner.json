@@ -1,65 +1,76 @@
 [
 	{
+		"name": "Solaris",
 		"conditions": {
 			"tag": "planet_name_solaris"
 		},
 		"items": "BTA_List_Solaris"
 	},
 	{
+		"name": "Arc Royal",
 		"conditions": {
 			"tag": "planet_name_arc-royal"
 		},
 		"items": "BTA_List_ArcRoyal"
 	},
 	{
+		"name": "Alarion",
 		"conditions": {
 			"tag": "planet_name_alarion"
 		},
 		"items": "BTA_List_Alarion"
 	},
 	{
+		"name": "Carlisle",
 		"conditions": {
 			"tag": "planet_name_carlisle"
 		},
 		"items": "BTA_List_Carlisle"
 	},
 	{
+		"name": "Loburg",
 		"conditions": {
 			"tag": "planet_name_loburg"
 		},
 		"items": "BTA_List_Loburg"
 	},
 	{
+		"name": "Son Hoa",
 		"conditions": {
 			"tag": "planet_name_sonhoa"
 		},
 		"items": "BTA_List_SonHoa"
 	},
 	{
+		"name": "Vendrell",
 		"conditions": {
 			"tag": "planet_name_vendrell"
 		},
 		"items": "BTA_List_Vendrell"
 	},
 	{
+		"name": "Chukchi",
 		"conditions": {
 			"tag": "planet_name_chukchi"
 		},
 		"items": "BTA_List_Chukchi"
 	},
 	{
+		"name": "Furillo",
 		"conditions": {
 			"tag": "planet_name_furillo"
 		},
 		"items": "BTA_List_Furillo"
 	},
 	{
+		"name": "Gallery",
 		"conditions": {
 			"tag": "planet_name_gallery"
 		},
 		"items": "BTA_List_Gallery"
 	},
 	{
+		"name": "Coventry",
 		"conditions": {
 			"tag": "planet_name_coventry",
 			"owner": "Steiner",
@@ -68,48 +79,56 @@
 		"items": "BTA_List_Coventry"
 	},
 	{
+		"name": "Inarcs",
 		"conditions": {
 			"tag": "planet_name_inarcs"
 		},
 		"items": "BTA_List_Inarcs"
 	},
 	{
+		"name": "Loxley",
 		"conditions": {
 			"tag": "planet_name_loxley"
 		},
 		"items": "BTA_List_Loxley"
 	},
 	{
+		"name": "Richvale",
 		"conditions": {
 			"tag": "planet_name_richvale"
 		},
 		"items": "BTA_List_Richvale"
 	},
 	{
+		"name": "Storfors",
 		"conditions": {
 			"tag": "planet_name_storfors"
 		},
 		"items": "BTA_List_Storfors"
 	},
 	{
+		"name": "Aur",
 		"conditions": {
 			"tag": "planet_name_aur"
 		},
 		"items": "BTA_List_Aur"
 	},
 	{
+		"name": "Tharkad",
 		"conditions": {
 			"tag": "planet_name_tharkad"
 		},
 		"items": "BTA_List_Tharkad"
 	},
 	{
+		"name": "Edasich",
 		"conditions": {
 			"tag": "planet_name_edasich"
 		},
 		"items": "BTA_List_Edasich"
 	},
 	{
+		"name": "Hesperus",
 		"conditions": {
 			"tag": "planet_name_hesperus",
 			"owner": "Steiner",
@@ -118,18 +137,14 @@
 		"items": "BTA_List_HesperusII"
 	},
 	{
-		"conditions": {
-			"tag": "planet_name_tauceti(newearth2116+)"
-		},
-		"items": "BTA_List_NewEarth"
-	},
-	{
+		"name": "New Kyoto",
 		"conditions": {
 			"tag": "planet_name_newkyoto"
 		},
 		"items": "BTA_List_NewKyoto"
 	},
 	{
+		"name": "Galatea",
 		"conditions": {
 			"tag": "planet_name_galatea"
 		},

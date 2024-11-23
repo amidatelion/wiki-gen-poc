@@ -18,6 +18,8 @@ Weapon_Bomb_Bay_Inferno,Weapon,0,1
 Weapon_Bomb_Bay_FuelAir,Weapon,0,1
 Weapon_Bomb_Bay_FASCAM,Weapon,0,1
 Weapon_Bomb_Bay_Rocket_Pod,Weapon,0,1
+Weapon_Skyshell_Cannon,Weapon,0,1
+Ammo_AmmunitionBox_Generic_SKYSHELL,AmmunitionBox,0,10
 Ammo_AmmunitionBox_Ultra_AC2,AmmunitionBox,0,10
 Ammo_AmmunitionBox_Ultra_AC5,AmmunitionBox,0,10
 Ammo_AmmunitionBox_Ultra_AC10,AmmunitionBox,0,10

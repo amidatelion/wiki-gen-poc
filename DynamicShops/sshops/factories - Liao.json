@@ -1,17 +1,20 @@
 [
 	{
+		"name": "Ares",
 		"conditions": {
 			"tag": "planet_name_ares"
 		},
 		"items": "BTA_List_Ares"
 	},
 	{
+		"name": "Bithinia",
 		"conditions": {
 			"tag": "planet_name_bithinia"
 		},
 		"items": "BTA_List_Bithinia"
 	},
 	{
+		"name": "Capella",
 		"conditions": {
 			"tag": "planet_name_capella",
 			"owner": "Liao",
@@ -20,36 +23,42 @@
 		"items": "BTA_List_Capella"
 	},
 	{
+		"name": "Corey",
 		"conditions": {
 			"tag": "planet_name_corey"
 		},
 		"items": "BTA_List_Corey"
 	},
 	{
+		"name": "Styk",
 		"conditions": {
 			"tag": "planet_name_styk"
 		},
 		"items": "BTA_List_Styk"
 	},
 	{
+		"name": "Tikonov",
 		"conditions": {
 			"tag": "planet_name_tikonov"
 		},
 		"items": "BTA_List_Tikonov"
 	},
 	{
+		"name": "Betelgeuse",
 		"conditions": {
 			"tag": "planet_name_betelgeuse"
 		},
 		"items": "BTA_List_Betelgeuse"
 	},
 	{
+		"name": "Menke",
 		"conditions": {
 			"tag": "planet_name_menke"
 		},
 		"items": "BTA_List_Menke"
 	},
 	{
+		"name": "Sian",
 		"conditions": {
 			"tag": "planet_name_sian",
 			"owner": "Liao",
@@ -58,30 +67,35 @@
 		"items": "BTA_List_Sian"
 	},
 	{
+		"name": "Indicass",
 		"conditions": {
 			"tag": "planet_name_indicass"
 		},
 		"items": "BTA_List_Indicass"
 	},
 	{
+		"name": "St. Ives",
 		"conditions": {
 			"tag": "planet_name_st.ives"
 		},
 		"items": "BTA_List_StIves"
 	},
 	{
+		"name": "Warlock",
 		"conditions": {
 			"tag": "planet_name_warlock"
 		},
 		"items": "BTA_List_Warlock"
 	},
 	{
+		"name": "Victoria",
 		"conditions": {
 			"tag": "planet_name_victoria"
 		},
 		"items": "BTA_List_Victoria"
 	},
 	{
+		"name": "Grand Base",
 		"conditions": {
 			"tag": "planet_name_grandbase"
 		},

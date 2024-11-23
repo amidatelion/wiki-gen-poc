@@ -2,6 +2,7 @@ import os
 import sys
 import json
 from pprint import pp
+import genUtilities
 
 def process_Faction_Collection(file_path):
     with open(file_path, "r") as json_file:
@@ -11,7 +12,8 @@ def process_Faction_Collection(file_path):
 
 def process_files(primary_path, prefix):
     file_dict = {}
-    csv_files_index = index_csv_files("/home/runner/work/wiki-actions-poc/wiki-actions-poc/bta/DynamicShops/")
+    #csv_files_index = genUtilities.index_csv_files("/home/runner/work/wiki-actions-poc/wiki-actions-poc/bta/DynamicShops/")
+    csv_files_index = genUtilities.index_csv_files(["../DynamicShops/"])
     # Iterate through files in primary path and process each
     for file_name in os.listdir(primary_path):
         full_path = os.path.join(primary_path, file_name)
@@ -19,15 +21,12 @@ def process_files(primary_path, prefix):
             file_dict[file_name] = []
             if file_name.endswith(".json"):
                 collection_name = process_Faction_Collection(full_path)
-
                 add_file_contents(collection_name, csv_files_index, file_dict, file_dict[file_name], prefix)
-
     return file_dict
 
 def add_file_contents(collection_name, csv_files_index, file_dict, current_file_lines, prefix):
         # Read file and get its contents
         csv_files_index[collection_name]
-        #print(csv_files_index[collection_name])
         with open(csv_files_index[collection_name], 'r') as file:
             lines = file.readlines()
         # Skip the first line
@@ -39,12 +38,7 @@ def add_file_contents(collection_name, csv_files_index, file_dict, current_file_
                 add_file_contents(line[0], csv_files_index, file_dict, current_file_lines, prefix)
             else: 
                 current_file_lines.append(line[0])
-            #print("Current state: \r\n", current_file_lines)
-            # If the line starts with the prefix, use the entire line as the file name
-                # Check if the referenced file exists in the secondary path
-#                if os.path.isfile(os.path.join(secondary_path, referenced_file)):
-#                    # Recursively add the contents of the referenced file
-#                    add_file_contents(referenced_file, secondary_path, file_dict, current_file_lines)
+
 
 def index_csv_files(directory):
     csv_files = {}
@@ -61,7 +55,7 @@ def index_csv_files(directory):
 
 if __name__ == "__main__":
     result = process_files(sys.argv[1], sys.argv[2])
-    pp(result)
+
     """get rid of this for now   
     for item_name, entries in matched_entries.items():
         print(f"Processing {item_name} list:")
