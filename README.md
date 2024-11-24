@@ -4,6 +4,10 @@ This serves as a proof of concept of a page generator for BTA wiki. Ideally this
 
 # How it works
 
+NOTE: v0.6 requires you to copy `Community Content` into the repo. Not captured here because 20,000 files.
+
+The python scripts can be called by function or independently. This needs to be firmed up for Github Actions deployment. To post to the wiki you need to `export` WIKI_USER and WIKI_PASS. See Amid or Wulfbanes for a bot account.
+
 ## Iteration 6
 1. Improved session management
 2. Factory rendering
@@ -16,6 +20,7 @@ This serves as a proof of concept of a page generator for BTA wiki. Ideally this
   1. Multiple entries of the same planet (Rattler)
   1. Multiple prefixes (`BTA_List_`)
 3. `black` autoformatting
+4. Fucking document how `add_*_contents()` functions' recursion works
 
 ### Out of Scope
 
