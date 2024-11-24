@@ -4,19 +4,18 @@ This serves as a proof of concept of a page generator for BTA wiki. Ideally this
 
 # How it works
 
-## Iteration 5
-Basically works like Iteration 4 except now 
-
-1. The scripts can call each other as necessary
-2. Instead of writing out a given wikitable to a file, it posts it to the wiki as a template
-3. Credentials for that posting exist as env vars only - this is for Github Action integration
+## Iteration 6
+1. Improved session management
+2. Factory rendering
+3. Github Actions POC and approved [here](https://github.com/amidatelion/wiki-actions-poc)
 
 ## Next Steps
 
 1. Do up the redirects for all the broken links (look into jinja conditionals to maybe do this automatically for big win items like FCS, heat sinks, etc)
-2. Reformat into Github Actions friendly format, post to BTA Org
-3. Github Actions demo
-4. Optimizations to keep Actions time as low as possible (hello async clients my old friends)
+2. Resolve Factory edge cases:
+  1. Multiple entries of the same planet (Rattler)
+  1. Multiple prefixes (`BTA_List_`)
+3. `black` autoformatting
 
 ### Out of Scope
 
@@ -24,6 +23,13 @@ Basically works like Iteration 4 except now
 2. ~~server updates to allow stuff like this to run on the scale of the List of Mechs without blowing up~~ Works fine for Faction Stores! 🎉
 
 <details>
+<summary>Iteration 5</summary>
+Basically works like Iteration 4 except now 
+
+1. The scripts can call each other as necessary
+2. Instead of writing out a given wikitable to a file, it posts it to the wiki as a template
+3. Credentials for that posting exist as env vars only - this is for Github Action integration
+
 <summary>Iteration 4</summary>
 1. `factionParser` takes two arguments currently: a source directory to walk through and a prefix exception (`itemCollection_` in this case. This was part of the generifying bits but it may be dropped for ease of executioni/legibility down the line). 
 2. It then recursively walks that directory for .json files and grabs the `items` entry. 
