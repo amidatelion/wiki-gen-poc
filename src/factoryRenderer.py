@@ -6,7 +6,6 @@ import factoryParser
 import genUtilities
 from pprint import pp
 
-
 #environment = Environment(loader=FileSystemLoader("/home/runner/work/wiki-actions-poc/wiki-actions-poc/wiki-gen-poc/templates/"))
 environment = Environment(loader=FileSystemLoader("../templates/"))
 template = environment.get_template("factory.tpl")
@@ -15,7 +14,7 @@ template = environment.get_template("factory.tpl")
 #codebase_dir = "/home/runner/work/wiki-actions-poc/wiki-actions-poc/bta"
 codebase_dir = "../../BattleTech-Advanced/"
 
-def render_factoryentry(planet, owner, rep, collection): 
+def render_factoryentry(planet, owner, rep, collection, session, csrf_token): 
     
     planet_name = planet
     results_filename = planet_name+"_store_Table.wiki"
@@ -78,9 +77,19 @@ def render_factoryentry(planet, owner, rep, collection):
         "contracts": contracts,
     }
 
+    # OldWiki page writing
+    #page_title = "Template:Factory_" + planet_name
+    #genUtilities.post_to_wiki(page_title, template.render(context))
+
     # Wiki page writing
     page_title = "Template:Factory_" + planet_name
-    genUtilities.post_to_wiki(page_title, template.render(context))
+    try:
+        # Post content using the reusable session
+        success = post_to_wiki(session, csrf_token, page_title, template.render(context))
+        print("Post successful:", success)
+    except Exception as e:
+        print("An with the wiki post error occurred:", e)
+
 
     # Local file writing
    # with open(results_filename, mode="w", encoding="utf-8") as results:
@@ -90,7 +99,11 @@ def render_factoryentry(planet, owner, rep, collection):
 if __name__ == "__main__":
     results = factoryParser.process_files("../DynamicShops/sshops")
     #results = factoryParser.process_files("/home/runner/work/wiki-actions-poc/wiki-actions-poc/bta/DynamicShops/fshops", "itemCollection_")
+
+    # Create a session and fetch the CSRF token
+    session, csrf_token = create_wiki_session()
+
     pp(results)
     for planet,items in results.items():
         #print("The planet ", planet, " is owned by ", items.get('owner'), "and with reputation ", items.get('rep'), " you can buy ", items.get('items'))
-        render_factoryentry(planet, items.get("owner"), items.get("rep"), items.get("items"))   
+        render_factoryentry(planet, items.get("owner"), items.get("rep"), items.get("items"), session, csrf_token)   
