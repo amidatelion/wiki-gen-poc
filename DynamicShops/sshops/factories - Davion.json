@@ -1,0 +1,139 @@
+[
+	{
+		"name": "Demeter",
+		"conditions": {
+			"tag": "planet_name_demeter"
+		},
+		"items": "BTA_List_Demeter"
+	},
+	{
+		"name": "Kathil",
+		"conditions": {
+			"tag": "planet_name_kathil"
+		},
+		"items": "BTA_List_Kathil"
+	},
+	{
+		"name": "Nanking",
+		"conditions": {
+			"tag": "planet_name_nanking"
+		},
+		"items": "BTA_List_Nanking"
+	},
+	{
+		"name": "New Syrtis",
+		"conditions": {
+			"tag": "planet_name_newsyrtis"
+		},
+		"items": "BTA_List_NewSyrtis"
+	},
+	{
+		"name": "Wernke (Talon)",
+		"conditions": {
+			"tag": "planet_name_wernke(talon)",
+			"owner": "Davion",
+			"rep": "+FRIENDLY"
+		},
+		"items": "BTA_List_Wernke"
+	},
+	{
+		"name": "Crofton",
+		"conditions": {
+			"tag": "planet_name_crofton"
+		},
+		"items": "BTA_List_Crofton"
+	},
+	{
+		"name": "Delavan",
+		"conditions": {
+			"tag": "planet_name_delavan"
+		},
+		"items": "BTA_List_Delavan"
+	},
+	{
+		"name": "Gulkana",
+		"conditions": {
+			"tag": "planet_name_gulkana"
+		},
+		"items": "BTA_List_Gulkana"
+	},
+	{
+		"name": "Johnsondale",
+		"conditions": {
+			"tag": "planet_name_johnsondale"
+		},
+		"items": "BTA_List_Johnsondale"
+	},
+	{
+		"name": "Kirklin",
+		"conditions": {
+			"tag": "planet_name_kirklin"
+		},
+		"items": "BTA_List_Kirklin"
+	},
+	{
+		"name": "Layover",
+		"conditions": {
+			"tag": "planet_name_layover"
+		},
+		"items": "BTA_List_Layover"
+	},
+	{
+		"name": "New Avalon",
+		"conditions": {
+			"tag": "planet_name_newavalon",
+			"owner": "Davion",
+			"rep": "+FRIENDLY"
+		},
+		"items": "BTA_List_NewAvalon"
+	},
+	{
+		"name": "New Valencia",
+		"conditions": {
+			"tag": "planet_name_newvalencia"
+		},
+		"items": "BTA_List_NewValencia"
+	},
+	{
+		"name": "Panpour",
+		"conditions": {
+			"tag": "planet_name_panpour"
+		},
+		"items": "BTA_List_Panpour"
+	},
+	{
+		"name": "Talcott",
+		"conditions": {
+			"tag": "planet_name_talcott"
+		},
+		"items": "BTA_List_Talcott"
+	},
+	{
+		"name": "Ozawa",
+		"conditions": {
+			"tag": "planet_name_ozawa"
+		},
+		"items": "BTA_List_Ozawa"
+	},
+	{
+		"name": "Robinson",
+		"conditions": {
+			"tag": "planet_name_robinson"
+		},
+		"items": "BTA_List_Robinson"
+	},
+	{
+		"name": "Tancredi",
+		"conditions": {
+			"tag": "planet_name_tancredi"
+		},
+		"items": "BTA_List_Tancredi"
+	},
+	{
+		"name": "Bristol",
+		"conditions": {
+			"tag": "planet_name_bristol"
+		},
+		"items": "BTA_List_Bristol"
+	}
+]

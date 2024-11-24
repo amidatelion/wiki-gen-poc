@@ -1,0 +1,195 @@
+[
+	{
+		"name": "Andurien",
+		"conditions": {
+			"tag": "planet_name_andurien"
+		},
+		"items": "BTA_List_Andurien"
+	},
+	{
+		"name": "Asuncion",
+		"conditions": {
+			"tag": "planet_name_asuncion"
+		},
+		"items": "BTA_List_Asuncion"
+	},
+	{
+		"name": "Atreus (FWL)",
+		"conditions": {
+			"tag": "planet_name_atreus(fwl)"
+		},
+		"items": "BTA_List_Atreus"
+	},
+	{
+		"name": "Bernardo",
+		"conditions": {
+			"tag": "planet_name_bernardo"
+		},
+		"items": "BTA_List_Bernardo"
+	},
+	{
+		"name": "Calloway",
+		"conditions": {
+			"tag": "planet_name_calloway"
+		},
+		"items": "BTA_List_Calloway"
+	},
+	{
+		"name": "Campbelton",
+		"conditions": {
+			"tag": "planet_name_campbelton"
+		},
+		"items": "BTA_List_Campbelton"
+	},
+	{
+		"name": "Connaught",
+		"conditions": {
+			"tag": "planet_name_connaught"
+		},
+		"items": "BTA_List_Connaugh"
+	},
+	{
+		"name": "Emris",
+		"conditions": {
+			"tag": "planet_name_emris"
+		},
+		"items": "BTA_List_Emris"
+	},
+	{
+		"name": "Gibson",
+		"conditions": {
+			"tag": "planet_name_gibson",
+			"owner": "Word of Blake",
+			"rep": "+FRIENDLY"
+		},
+		"items": "BTA_List_Gibson"
+	},
+	{
+		"name": "Irian",
+		"conditions": {
+			"tag": "planet_name_irian",
+			"owner": "Marik",
+			"rep": "+FRIENDLY"
+		},
+		"items": "BTA_List_Irian"
+	},
+	{
+		"name": "Kalidasa",
+		"conditions": {
+			"tag": "planet_name_kalidasa"
+		},
+		"items": "BTA_List_Kalidasa"
+	},
+	{
+		"name": "Kendall",
+		"conditions": {
+			"tag": "planet_name_kendall"
+		},
+		"items": "BTA_List_Kendall"
+	},
+	{
+		"name": "Keystone",
+		"conditions": {
+			"tag": "planet_name_keystone"
+		},
+		"items": "BTA_List_Keystone"
+	},
+	{
+		"name": "Lopez",
+		"conditions": {
+			"tag": "planet_name_lopez"
+		},
+		"items": "BTA_List_Lopez"
+	},
+	{
+		"name": "Loyalty",
+		"conditions": {
+			"tag": "planet_name_loyalty"
+		},
+		"items": "BTA_List_Loyalty"
+	},
+	{
+		"name": "Molokai",
+		"conditions": {
+			"tag": "planet_name_molokai"
+		},
+		"items": "BTA_List_Molokai"
+	},
+	{
+		"name": "Oriente",
+		"conditions": {
+			"tag": "planet_name_oriente"
+		},
+		"items": "BTA_List_Oriente"
+	},
+	{
+		"name": "Paradise",
+		"conditions": {
+			"tag": "planet_name_paradise"
+		},
+		"items": "BTA_List_Paradise"
+	},
+	{
+		"name": "Savannah",
+		"conditions": {
+			"tag": "planet_name_savannah"
+		},
+		"items": "BTA_List_Savannah"
+	},
+	{
+		"name": "Shrio",
+		"conditions": {
+			"tag": "planet_name_shiro"
+		},
+		"items": "BTA_List_Shiro"
+	},
+	{
+		"name": "Stewart",
+		"conditions": {
+			"tag": "planet_name_stewart"
+		},
+		"items": "BTA_List_Stewart"
+	},
+	{
+		"name": "Tematagi",
+		"conditions": {
+			"tag": "planet_name_tematagi"
+		},
+		"items": "BTA_List_Tematagi"
+	},
+	{
+		"name": "Thermopolis",
+		"conditions": {
+			"tag": "planet_name_thermopolis"
+		},
+		"items": "BTA_List_Thermopolis"
+	},
+	{
+		"name": "Wallis",
+		"conditions": {
+			"tag": "planet_name_wallis"
+		},
+		"items": "BTA_List_Wallis"
+	},
+	{
+		"name": "New Dallas",
+		"conditions": {
+			"tag": "planet_name_newdallas"
+		},
+		"items": "BTA_List_NewDallas"
+	},
+	{
+		"name": "Silver",
+		"conditions": {
+			"tag": "planet_name_silver"
+		},
+		"items": "BTA_List_Silver"
+	},
+	{
+		"name": "Tongatapu",
+		"conditions": {
+			"tag": "planet_name_tongatapu"
+		},
+		"items": "BTA_List_Tongatapu"
+	}
+]
